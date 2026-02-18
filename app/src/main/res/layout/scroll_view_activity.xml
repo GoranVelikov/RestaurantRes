@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ADD8E6">
+
+
+
+
+    <View
+        android:id="@+id/roomDivider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/verticalDivider"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/roomDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/viewT1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:contentDescription="T1"
+        android:onClick="onTableClick"
+        android:rotation="5"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/viewT2"
+        app:layout_constraintBottom_toTopOf="@id/viewT3"
+        app:srcCompat="@drawable/sq_table"/>
+
+    <ImageView
+        android:id="@+id/viewT2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:contentDescription="T2"
+        android:onClick="onTableClick"
+        android:rotation="-10"
+
+
+        app:layout_constraintStart_toEndOf="@id/viewT1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewT4"
+        app:srcCompat="@drawable/cir_table" />
+
+    <ImageView
+        android:id="@+id/viewT3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:contentDescription="T3"
+        android:onClick="onTableClick"
+        android:rotation="-25"
+
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewT1"
+        app:layout_constraintEnd_toStartOf="@id/viewT4"
+        app:layout_constraintBottom_toTopOf="@id/roomDivider"
+        app:srcCompat="@drawable/cir_table" />
+
+    <ImageView
+        android:id="@+id/viewT4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:contentDescription="T4"
+        android:onClick="onTableClick"
+        android:rotation="-5"
+
+
+        app:layout_constraintStart_toEndOf="@id/viewT3"
+        app:layout_constraintTop_toBottomOf="@id/viewT2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/roomDivider"
+        app:srcCompat="@drawable/sq_table" />
+
+    <ImageView
+        android:id="@+id/viewT5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:contentDescription="T5"
+        android:onClick="onTableClick"
+        android:rotation="15"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/roomDivider"
+        app:layout_constraintEnd_toStartOf="@id/verticalDivider"
+        app:layout_constraintBottom_toTopOf="@id/viewT6"
+        app:srcCompat="@drawable/cir_table" />
+
+    <ImageView
+        android:id="@+id/viewT6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:contentDescription="T6"
+        android:onClick="onTableClick"
+        android:rotation="-10"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewT5"
+        app:layout_constraintEnd_toStartOf="@id/verticalDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/cir_table" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:text="@string/WC"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        android:gravity="center"
+
+        app:layout_constraintStart_toStartOf="@id/verticalDivider"
+        app:layout_constraintTop_toBottomOf="@id/roomDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
