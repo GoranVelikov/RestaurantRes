@@ -1,11 +1,11 @@
-package com.example.restaurant_mobile.ui.layout;
+package com.example.restaurant_mobile.ui.table;
 
 import android.view.View;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.restaurant_mobile.model.TablePosition;
 
-public class TableLayoutHelper {
+public class TableFragment {
 
     public static void apply(View tableView, TablePosition position) {
 
@@ -22,7 +22,7 @@ public class TableLayoutHelper {
 
         tableView.setLayoutParams(params);
 
-        // Rotation is visual, not layout
+        // Rotation is visual, not table
         tableView.setRotation(position.rotation);
     }
 }

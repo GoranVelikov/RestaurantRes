@@ -1,4 +1,4 @@
-package com.example.restaurant_mobile.util;
+package com.example.restaurant_mobile.logic;
 
 import com.example.restaurant_mobile.R;
 
