@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.restaurant_mobile.R;
 import com.example.restaurant_mobile.logic.TimeController;
+import com.example.restaurant_mobile.ui.dialogs.ReservationDialogFragment;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
@@ -52,6 +53,13 @@ public class MainActivity extends AppCompatActivity {
 
         time_back.setOnClickListener(v -> onTimeChange(-90));
         time_forward.setOnClickListener(v -> onTimeChange(90));
+
+        findViewById(R.id.viewT1).setOnClickListener(this::onTableClick);
+        findViewById(R.id.viewT2).setOnClickListener(this::onTableClick);
+        findViewById(R.id.viewT3).setOnClickListener(this::onTableClick);
+        findViewById(R.id.viewT4).setOnClickListener(this::onTableClick);
+        findViewById(R.id.viewT5).setOnClickListener(this::onTableClick);
+        findViewById(R.id.viewT6).setOnClickListener(this::onTableClick);
 
     }
 
@@ -103,17 +111,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onTableClick(View view) {
-        int tableId = view.getId();
+        int tableId     = view.getId();
 
-        String tableName = "";
-        if (tableId == R.id.viewT1) tableName = "T1";
-        else if (tableId == R.id.viewT2) tableName = "T2";
-        else if (tableId == R.id.viewT3) tableName = "T3";
-        else if (tableId == R.id.viewT4) tableName = "T4";
-        else if (tableId == R.id.viewT5) tableName = "T5";
-        else if (tableId == R.id.viewT6) tableName = "T6";
+        String tableName = (String) view.getTag();
 
-        showReservationDialog(tableName);
+        ReservationDialogFragment dialog= ReservationDialogFragment.newInstance(tableName);
+        dialog.show(getSupportFragmentManager(),"reservaitionDialog");
     }
 
     private void showReservationDialog(String tableName) {
