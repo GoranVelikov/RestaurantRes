@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.example.restaurant_mobile.R;
+import com.example.restaurant_mobile.model.ReservationRequest;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,6 +22,10 @@ public class ReservationDialogFragment extends Fragment {
 
     public ReservationDialogFragment() {
         // Required empty public constructor
+    }
+
+    public interface ReservationListener{
+        void onReservationConfirmed(ReservationRequest request);
     }
 
     public static ReservationDialogFragment newInstance(String tableId) {

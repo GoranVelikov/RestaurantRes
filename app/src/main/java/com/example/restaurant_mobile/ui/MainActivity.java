@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.example.restaurant_mobile.R;
 import com.example.restaurant_mobile.logic.TimeController;
+import com.example.restaurant_mobile.model.ReservationRequest;
+import com.example.restaurant_mobile.repository.ReservationRepository;
 import com.example.restaurant_mobile.ui.dialogs.ReservationDialogFragment;
 
 import java.text.SimpleDateFormat;
@@ -22,7 +24,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ReservationDialogFragment.ReservationListener{
 
     private Button time_back,time_forward;
     private TextView time_lable,date_lable;
@@ -115,11 +117,16 @@ public class MainActivity extends AppCompatActivity {
 
         String tableName = (String) view.getTag();
 
-        ReservationDialogFragment dialog= ReservationDialogFragment.newInstance(tableName);
-        dialog.show(getSupportFragmentManager(),"reservaitionDialog");
+        ReservationDialogFragment dialog= ReservationDialogFragment.newInstance(String.valueOf(tableId));
+        dialog.show(getSupportFragmentManager(),"reservationDialog");
     }
 
     private void showReservationDialog(String tableName) {
     }
 
+    @Override
+    public void onReservationConfirmed(ReservationRequest request) {
+        ReservationRepository repository=new ReservationRepository();
+        repository.makeReservation(request);
+    }
 }
