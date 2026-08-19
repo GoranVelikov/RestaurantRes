@@ -33,107 +33,106 @@
         android:id="@+id/viewT1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="1:1"
-        android:contentDescription="T1"
-        android:tag="T1"
+        android:contentDescription="@string/Table1"
         android:onClick="onTableClick"
         android:rotation="5"
+        android:tag="T1"
+        app:layout_constraintBottom_toTopOf="@id/viewT3"
 
 
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/viewT2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/viewT2"
-        app:layout_constraintBottom_toTopOf="@id/viewT3"
-        app:srcCompat="@drawable/sq_table"/>
+        app:srcCompat="@drawable/sq_table" />
 
     <ImageView
         android:id="@+id/viewT2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="1:1"
-        android:contentDescription="T2"
-        android:tag="T2"
+        android:contentDescription="@string/Table2"
         android:onClick="onTableClick"
         android:rotation="-10"
-
-
-        app:layout_constraintStart_toEndOf="@id/viewT1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:tag="T2"
         app:layout_constraintBottom_toTopOf="@id/viewT4"
+
+
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/viewT1"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cir_table" />
 
     <ImageView
         android:id="@+id/viewT3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="1:1"
-        android:contentDescription="T3"
-        android:tag="T3"
+        android:contentDescription="@string/Table3"
         android:onClick="onTableClick"
         android:rotation="-25"
+        android:tag="T3"
+        app:layout_constraintBottom_toTopOf="@id/roomDivider"
 
 
-
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/viewT4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/viewT1"
-        app:layout_constraintEnd_toStartOf="@id/viewT4"
-        app:layout_constraintBottom_toTopOf="@id/roomDivider"
         app:srcCompat="@drawable/cir_table" />
 
     <ImageView
         android:id="@+id/viewT4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="1:1"
-        android:contentDescription="T4"
-        android:tag="T4"
+        android:contentDescription="@string/Table4"
         android:onClick="onTableClick"
         android:rotation="-5"
+        android:tag="T4"
+        app:layout_constraintBottom_toTopOf="@id/roomDivider"
 
 
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/viewT3"
         app:layout_constraintTop_toBottomOf="@id/viewT2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/roomDivider"
         app:srcCompat="@drawable/sq_table" />
 
     <ImageView
         android:id="@+id/viewT5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="1:1"
-        android:contentDescription="T5"
-        android:tag="T5"
+        android:contentDescription="@string/Table5"
         android:onClick="onTableClick"
         android:rotation="15"
+        android:tag="T5"
+        app:layout_constraintBottom_toTopOf="@id/viewT6"
 
 
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/verticalDivider"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/roomDivider"
-        app:layout_constraintEnd_toStartOf="@id/verticalDivider"
-        app:layout_constraintBottom_toTopOf="@id/viewT6"
         app:srcCompat="@drawable/cir_table" />
 
     <ImageView
         android:id="@+id/viewT6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="1:1"
-        android:contentDescription="T6"
-        android:tag="T6"
+        android:contentDescription="@string/Table6"
         android:onClick="onTableClick"
         android:rotation="-10"
+        android:tag="T6"
+        app:layout_constraintBottom_toBottomOf="parent"
 
 
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/verticalDivider"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/viewT5"
-        app:layout_constraintEnd_toStartOf="@id/verticalDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:srcCompat="@drawable/cir_table" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/WcView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="1:1"

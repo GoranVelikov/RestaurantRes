@@ -4,8 +4,13 @@
     <string name="DateText">Date:</string>
     <string name="StartTime">19:00</string>
     <string name="EndTime">23:30</string>
+    <string name="Table1">T1</string>
+    <string name="Table2">T2</string>
+    <string name="Table3">T3</string>
+    <string name="Table4">T4</string>
+    <string name="Table5">T5</string>
+    <string name="Table6">T6</string>
     <string name="arrowLeft">←</string>
     <string name="arrowRight">→</string>
-<!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
